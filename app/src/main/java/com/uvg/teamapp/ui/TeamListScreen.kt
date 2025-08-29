@@ -1,5 +1,6 @@
 package com.uvg.teamapp.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -24,6 +25,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import com.uvg.teamapp.model.FakeTeamRepository
 import com.uvg.teamapp.model.TeamMember
 
@@ -35,6 +38,12 @@ fun TeamListScreen(
     val repository = FakeTeamRepository()
     val members = repository.getTeamMembers()
 
+    Image(
+        painter = painterResource(id = com.uvg.teamapp.R.drawable.background),
+        contentDescription = "Fondo",
+        modifier = Modifier.fillMaxSize(),
+        contentScale = ContentScale.Fit
+    )
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         contentPadding = contentPadding
@@ -69,6 +78,8 @@ fun TeamMemberItem(member: TeamMember, onClick: () -> Unit = {}) { // Añadimos 
                 modifier = Modifier.size(40.dp), // Ajusta el tamaño del icono según necesites
                 tint = MaterialTheme.colorScheme.onSurfaceVariant // Color del icono
             )
+
+
 
             Spacer(modifier = Modifier.width(16.dp)) // Espacio entre el icono y la columna de texto
 
