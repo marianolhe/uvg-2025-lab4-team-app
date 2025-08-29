@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.uvg.teamapp.ui.theme.TeamAppTheme
+import com.uvg.teamapp.ui.TeamListScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             TeamAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TeamListScreen()
+                    TeamListScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
