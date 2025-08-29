@@ -20,10 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             TeamAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Equipo",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    TeamListScreen()
                 }
             }
         }
