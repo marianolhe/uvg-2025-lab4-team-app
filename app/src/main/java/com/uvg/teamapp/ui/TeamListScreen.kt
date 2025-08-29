@@ -42,7 +42,7 @@ fun TeamListScreen(
         painter = painterResource(id = com.uvg.teamapp.R.drawable.background),
         contentDescription = "Fondo",
         modifier = Modifier.fillMaxSize(),
-        contentScale = ContentScale.Fit
+        contentScale = ContentScale.Crop
     )
     LazyColumn(
         modifier = modifier.fillMaxSize(),
