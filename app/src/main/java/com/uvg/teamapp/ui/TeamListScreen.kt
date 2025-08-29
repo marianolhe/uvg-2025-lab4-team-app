@@ -55,45 +55,45 @@ fun TeamListScreen(
 }
 
 @Composable
-fun TeamMemberItem(member: TeamMember, onClick: () -> Unit = {}) { // Añadimos onClick opcional por si lo necesitas luego
+fun TeamMemberItem(member: TeamMember, onClick: () -> Unit = {}) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp) // Añade padding horizontal aquí también
-            .clickable(onClick = onClick), // Hacemos la tarjeta clickeable
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .clickable(onClick = onClick),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant, // Color de fondo para la tarjeta
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
         )
     ) {
         Row(
             modifier = Modifier
-                .padding(16.dp) // Padding interno para el contenido de la Card
+                .padding(16.dp)
                 .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically // Alinea el icono y el texto verticalmente
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
                 imageVector = Icons.Filled.Person,
                 contentDescription = "Icono de Miembro del Equipo",
-                modifier = Modifier.size(40.dp), // Ajusta el tamaño del icono según necesites
-                tint = MaterialTheme.colorScheme.onSurfaceVariant // Color del icono
+                modifier = Modifier.size(40.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
 
 
-            Spacer(modifier = Modifier.width(16.dp)) // Espacio entre el icono y la columna de texto
+            Spacer(modifier = Modifier.width(16.dp))
 
-            Column { // Mantenemos la columna para nombre y descripción
+            Column {
                 Text(
                     text = member.name,
                     style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant // Color del texto del nombre
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
                     text = member.description,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f) // Color del texto de descripción, un poco más suave
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f)
                 )
             }
         }
