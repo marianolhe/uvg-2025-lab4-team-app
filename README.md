@@ -27,3 +27,15 @@ Al finalizar:
     - Capturas de pantalla de la app funcionando.
     - Explicación de cómo resolvieron los conflictos y organizaron el flujo de trabajo.
     - Reflexión del equipo sobre lo aprendido.
+
+-Resultado Final.
+
+![resultado final](app/src/main/res/drawable/ejemplo_resultado.png)
+
+
+-Reflexión
+
+Aplicamos con el uso del PullRequest a tener una mejor organización de trabajo y revisar nuestro código conforme lo vamo implementando a la rama develop, también la importancia de colocar nobres y descripciones significativas en los commits y pullRequest,
+asi comprender que se está implementando al programa.
+
+Los pullRequest permitió prevenir conflictos antes de implementar los cambios a develop y considerar el tiempo para finalizar con un feature y continuar con otro, asi no crear conflictos de estar trabajando todos los miembros al mismo tiempo.
